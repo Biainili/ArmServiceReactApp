@@ -1,8 +1,33 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import iconServ from '../../assets/img/888-ICON_SERV.png';
 import emailjs from '@emailjs/browser';
 
+const useScrollAnimation = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll('.left_anim_sec1, .right_anim_sec1, .left_anim_sec2, .right_anim_sec2, .left_anim_sec4, .right_anim_sec4, .card-animation');
+    elements.forEach(element => observer.observe(element));
+
+    return () => {
+      elements.forEach(element => observer.unobserve(element));
+    };
+  }, []);
+};
+
 const InputForm: React.FC = () => {
+  useScrollAnimation();
+
   const form = useRef<HTMLFormElement>(null);
   const [vel, setVel] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -40,9 +65,8 @@ const InputForm: React.FC = () => {
 
   return (
     <section className="bg-warning text-light p-5 aaa">
-      <div className="container ">
-        <div className="d-md-flex justify-content-between md-justify-content-center align-items-center gap-4 ">
-
+      <div className="container">
+        <div className="d-md-flex justify-content-between md-justify-content-center align-items-center gap-4">
           <div className="coustem_for_sibmet left_anim_sec2">
             <h3 className="mb-3 mb-md-0 text-center coustem_h3 text-uppercase">
               Send a service purchase request
@@ -51,7 +75,7 @@ const InputForm: React.FC = () => {
           </div>
 
           <form ref={form} onSubmit={sendEmail} className="w_size right_anim_sec2">
-            <div className="mb-3 ">
+            <div className="mb-3">
               <label htmlFor="exampleFormControlInput1" className="form-label">
                 Name Surname
               </label>
@@ -120,7 +144,6 @@ const InputForm: React.FC = () => {
             {error && <p className='mt-4 text-center text-danger'>{error}</p>}
             {vel && <p className='mt-4 text-center'>Your request has been sent, thank you</p>}
           </form>
-  
         </div>
       </div>
     </section>

@@ -17,7 +17,7 @@ const Contactus = () => {
                 <a className="text_black">+374 33 55 75 65</a>
               </div>
             </div>
-            <div className="col-md card-animation" style={{ animationDelay: '0.4s' }}>
+            <div className="col-md card-animation" style={{ animationDelay: '0.3s' }}>
               <div className="mb-3 bg-warning item_contact">
                 <img src={WhatsApp} alt="WhatsApp" className="icon_size" />
                 <a className="text_black">+374 33 55 75 65</a>
@@ -25,13 +25,13 @@ const Contactus = () => {
             </div>
           </div>
           <div className="row gap-3">
-            <div className="col-md card-animation" style={{ animationDelay: '0.8s' }}>
+            <div className="col-md card-animation" style={{ animationDelay: '0.6s' }}>
               <div className="mb-3 bg-warning item_contact">
                 <img src={TelegramImg} alt="Telegram" className="icon_size" />
                 <a className="text_black">+374 33 55 75 65</a>
               </div>
             </div>
-            <div className="col-md card-animation" style={{ animationDelay: '1.2s' }}>
+            <div className="col-md card-animation" style={{ animationDelay: '0.9s' }}>
               <div className="mb-3 bg-warning item_contact">
                 <img src={EmailImg} alt="Email" className="icon_size" />
                 <a className="text_black">+374 33 55 75 65</a>

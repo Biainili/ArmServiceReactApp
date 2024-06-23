@@ -154,7 +154,6 @@ form label,
 
 
 
-
 /* Animation */
 
 @keyframes slideInFromLeft {
@@ -181,32 +180,6 @@ form label,
   }
 }
 
-.left_anim_sec1 {
-  animation: slideInFromLeft 1s ease-in-out;
-}
-
-.right_anim_sec1 {
-  animation: slideInFromRight 1s ease-in-out;
-}
-
-
-.left_anim_sec2 {
-  animation: slideInFromLeft 1s ease-in-out;
-}
-
-.right_anim_sec2 {
-  animation: slideInFromRight 1s ease-in-out;
-}
-
-.left_anim_sec4 {
-  animation: slideInFromLeft 1s ease-in-out;
-}
-
-.right_anim_sec4 {
-  animation: slideInFromRight 1s ease-in-out;
-}
-
-
 @keyframes animServiceCard {
   from {
     transform: translateY(100px);
@@ -218,9 +191,37 @@ form label,
   }
 }
 
+.left_anim_sec1, .right_anim_sec1,
+.left_anim_sec2, .right_anim_sec2,
+.left_anim_sec4, .right_anim_sec4,
 .card-animation {
   opacity: 0;
-  animation: animServiceCard 1s ease-out forwards;
 }
 
+.left_anim_sec1.visible {
+  animation: slideInFromLeft 1s ease-in-out forwards;
+}
 
+.right_anim_sec1.visible {
+  animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+.left_anim_sec2.visible {
+  animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+.right_anim_sec2.visible {
+  animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+.left_anim_sec4.visible {
+  animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+.right_anim_sec4.visible {
+  animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+.card-animation.visible {
+  animation: animServiceCard 0.8s ease-out forwards;
+}

@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Import images
 import slide1Img from '../../assets/img/SLID_1.png';
 import yerImg from '../../assets/img/Yer.png';
 import yeranImg from '../../assets/img/yeran.png';
 
+const useScrollAnimation = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll('.left_anim_sec4, .right_anim_sec4');
+    elements.forEach(element => observer.observe(element));
+
+    return () => {
+      elements.forEach(element => observer.unobserve(element));
+    };
+  }, []);
+};
+
 const About = () => {
+  useScrollAnimation();
   return (
     <section className="bg-warning text-light p-md-5 p-4 text-center">
       <div className="container">
