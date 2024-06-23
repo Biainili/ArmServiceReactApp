@@ -28,7 +28,7 @@ const Footer = () => {
               className="item_footer fs-5 card-animation"
               style={{ animationDelay: "0.9s" }}
             >
-              <a href="">Accounting</a>
+              <a href="" className="footer_item">Accounting</a>
             </li>
           </ul>
         </div>

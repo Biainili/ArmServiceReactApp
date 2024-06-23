@@ -36,8 +36,8 @@ const About = () => {
         <h1 className="mb-5 pt-md-0 pt-5 text-uppercase">About us</h1>
         <div className="row container_about">
           <div
-            className="col-lg-4 p-3 w-sm-50 bg-secondary bordRuP bord mb-4 left_anim_sec4"
-            style={{ alignSelf: "center" }}
+            className="col-lg-4 p-3 w-sm-50 bg-secondary bordRuP bord mb-8 left_anim_sec4 custom_margin_bottom"
+
           >
             <div
               id="carouselExampleAutoplaying"

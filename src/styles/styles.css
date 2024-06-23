@@ -2,7 +2,7 @@
   max-width: 350px;
   width: 100%;
 }
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -78,13 +78,15 @@ form label,
 
 .custom_item {
   cursor: pointer;
+  display: inline-block;
   transition: font-size 0.3s ease;
 }
 
 .custom_item:hover {
   color: white;
   background-color: black;
-  font-size: 20px;
+  transform: scale(1.1);
+  font-size: 18px;
 }
 
 .icon_size {
@@ -100,22 +102,29 @@ form label,
   justify-content: center;
   gap: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.item_contact:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .item_footer a {
+  display: inline-block; 
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
   text-shadow: 1px 1px 2px rgb(255, 254, 254);
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; 
 }
 
 .item_footer a:hover {
-  transform: scale(1.1);
+  transform: scale(1.4);
   color: #ffc107;
 }
+
 
 @media (max-width: 770px) {
   .w_size {
@@ -151,7 +160,10 @@ form label,
   width: 100px;
 }
 
-
+.custom_margin_bottom {
+  padding-bottom: 20px !important;
+  align-self: center;
+}
 
 
 /* Animation */
@@ -191,9 +203,12 @@ form label,
   }
 }
 
-.left_anim_sec1, .right_anim_sec1,
-.left_anim_sec2, .right_anim_sec2,
-.left_anim_sec4, .right_anim_sec4,
+.left_anim_sec1,
+.right_anim_sec1,
+.left_anim_sec2,
+.right_anim_sec2,
+.left_anim_sec4,
+.right_anim_sec4,
 .card-animation {
   opacity: 0;
 }
