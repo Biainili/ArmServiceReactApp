@@ -9,14 +9,14 @@ const Footer = () => {
         <ul
           className="d-flex flex-column gap-4 gap-lg-0 flex-lg-row justify-content-between"
         >
-          <li className="item_footer fs-5"><a href="">Declarations</a></li>
-          <li className="item_footer fs-5">
+          <li className="item_footer fs-5 card-animation"><a href="">Declarations</a></li>
+          <li className="item_footer fs-5 card-animation">
             <a href="">Notarized translations</a>
           </li>
-          <li className="item_footer fs-5">
+          <li className="item_footer fs-5 card-animation">
             <a href="">Licenses and permits</a>
           </li>
-          <li className="item_footer fs-5"><a href="">Accounting</a></li>
+          <li className="item_footer fs-5 card-animation"><a href="">Accounting</a></li>
         </ul>
       </div>
       <div

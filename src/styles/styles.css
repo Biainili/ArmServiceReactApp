@@ -114,9 +114,7 @@ form label,
 
 .item_footer a:hover {
   transform: scale(1.1);
-  /* Увеличение на 10% */
   color: #ffc107;
-  /* Изменение цвета при наведении, при необходимости */
 }
 
 @media (max-width: 770px) {
@@ -137,6 +135,25 @@ form label,
 .aaa {
   overflow: hidden;
 }
+
+.custUl {
+  padding-inline: 20px;
+}
+
+.custli {
+  list-style-type: disclosure-closed;
+  margin-bottom: 10px;
+  background-color: #d7d4d4;
+}
+
+.img_icon {
+  align-self: center;
+  width: 100px;
+}
+
+
+
+
 
 /* Animation */
 
@@ -164,8 +181,6 @@ form label,
   }
 }
 
-
-
 .left_anim_sec1 {
   animation: slideInFromLeft 1s ease-in-out;
 }
@@ -190,3 +205,22 @@ form label,
 .right_anim_sec4 {
   animation: slideInFromRight 1s ease-in-out;
 }
+
+
+@keyframes animServiceCard {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card-animation {
+  opacity: 0;
+  animation: animServiceCard 1s ease-out forwards;
+}
+
+

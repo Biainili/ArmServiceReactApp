@@ -9,9 +9,9 @@ const Card: React.FC<CardDataService> = ({
   fields,
   id,
 }) => {
-  const modalId = `exampleModal${id}`; // Создание уникального идентификатора для модального окна
+  const modalId = `exampleModal${id}`;
   return (
-    <div className="card bg-warning text-light" style={{ width: "22rem" }}>
+    <div className="card bg-warning text-light" style={{ width: "22rem" , animationDelay: `${id * 0.1}s`}}>
       <img src={imgSrc} className="card-img-top" alt={title} />
       <div className="card-body">
         <h5 className="card-title text_black">{title}</h5>
@@ -20,7 +20,7 @@ const Card: React.FC<CardDataService> = ({
           type="button"
           className="btn btn-dark"
           data-bs-toggle="modal"
-          data-bs-target={`#${modalId}`} // Использование уникального идентификатора для data-bs-target
+          data-bs-target={`#${modalId}`}
         >
           Get Started
         </button>
@@ -28,9 +28,9 @@ const Card: React.FC<CardDataService> = ({
       {/* Modal For Migration Armenia START */}
       <div
         className="modal fade text-dark"
-        id={modalId} 
+        id={modalId}
         tabIndex={-1}
-        aria-labelledby={`${modalId}Label`} 
+        aria-labelledby={`${modalId}Label`}
         aria-hidden="true"
       >
         <div className="modal-dialog modal-xl">
@@ -38,7 +38,7 @@ const Card: React.FC<CardDataService> = ({
             <div className="modal-header">
               <h1
                 className="modal-title fs-3 text_black"
-                id={`${modalId}Label`} 
+                id={`${modalId}Label`}
               >
                 {title}
               </h1>
@@ -58,24 +58,51 @@ const Card: React.FC<CardDataService> = ({
                     <h4 className="bg-warning custom_titel_a">
                       {fields.visaConsultation && fields.visaConsultation[0]}
                     </h4>
-                    <ul className="list-unstyled">
-                      {fields.visaConsultation && fields.visaConsultation.map((item, index) => (
-                        index > 0 && <li key={index}>{item}</li>
-                      ))}
+                    <ul className="list-unstyled custUl">
+                      {fields.visaConsultation &&
+                        fields.visaConsultation.map(
+                          (item, index) =>
+                            index > 0 && (
+                              <li key={index} className="custli">
+                                {item}
+                              </li>
+                            )
+                        )}
                     </ul>
+                    <img
+                      src={
+                        fields.icon_aps ? fields.icon_aps[0] : "/default.png"
+                      }
+                      alt="/"
+                      className="img_icon"
+                    />
                   </div>
                 </div>
 
                 <div className="col-lg">
                   <div className="text-center" title="visa">
                     <h4 className="bg-warning custom_titel_a">
-                      {fields.relocationAssistance && fields.relocationAssistance[0]}
+                      {fields.relocationAssistance &&
+                        fields.relocationAssistance[0]}
                     </h4>
-                    <ul className="list-unstyled">
-                      {fields.relocationAssistance && fields.relocationAssistance.map((item, index) => (
-                        index > 0 && <li key={index}>{item}</li>
-                      ))}
+                    <ul className="list-unstyled custUl">
+                      {fields.relocationAssistance &&
+                        fields.relocationAssistance.map(
+                          (item, index) =>
+                            index > 0 && (
+                              <li key={index} className="custli">
+                                {item}
+                              </li>
+                            )
+                        )}
                     </ul>
+                    <img
+                      src={
+                        fields.icon_aps ? fields.icon_aps[1] : "/default.png"
+                      }
+                      alt="/"
+                      className="img_icon"
+                    />
                   </div>
                 </div>
               </div>
@@ -84,13 +111,27 @@ const Card: React.FC<CardDataService> = ({
                 <div className="col-lg">
                   <div className="text-center" title="visa">
                     <h4 className="bg-warning custom_titel_a">
-                      {fields.documentTranslation && fields.documentTranslation[0]}
+                      {fields.documentTranslation &&
+                        fields.documentTranslation[0]}
                     </h4>
-                    <ul className="list-unstyled">
-                      {fields.documentTranslation && fields.documentTranslation.map((item, index) => (
-                        index > 0 && <li key={index}>{item}</li>
-                      ))}
+                    <ul className="list-unstyled custUl">
+                      {fields.documentTranslation &&
+                        fields.documentTranslation.map(
+                          (item, index) =>
+                            index > 0 && (
+                              <li key={index} className="custli">
+                                {item}
+                              </li>
+                            )
+                        )}
                     </ul>
+                    <img
+                      src={
+                        fields.icon_aps ? fields.icon_aps[2] : "/default.png"
+                      }
+                      alt="/"
+                      className="img_icon"
+                    />
                   </div>
                 </div>
                 <div className="col-lg">
@@ -98,11 +139,24 @@ const Card: React.FC<CardDataService> = ({
                     <h4 className="bg-warning custom_titel_a">
                       {fields.legalSupport && fields.legalSupport[0]}
                     </h4>
-                    <ul className="list-unstyled">
-                      {fields.legalSupport && fields.legalSupport.map((item, index) => (
-                        index > 0 && <li key={index}>{item}</li>
-                      ))}
+                    <ul className="list-unstyled custUl">
+                      {fields.legalSupport &&
+                        fields.legalSupport.map(
+                          (item, index) =>
+                            index > 0 && (
+                              <li key={index} className="custli">
+                                {item}
+                              </li>
+                            )
+                        )}
                     </ul>
+                    <img
+                      src={
+                        fields.icon_aps ? fields.icon_aps[3] : "/default.png"
+                      }
+                      alt="/"
+                      className="img_icon"
+                    />
                   </div>
                 </div>
               </div>

@@ -8,6 +8,8 @@ export interface CardDataService {
         relocationAssistance?: string[];
         documentTranslation?: string[];
         legalSupport?: string[];
+        icon_aps?:string[];
     };
-    id:number
+    id:number;
+    className?: string;
 }
