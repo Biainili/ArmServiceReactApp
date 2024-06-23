@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ArmServiceReactApp/static/css/main.be6649a2.css",
-    "main.js": "/ArmServiceReactApp/static/js/main.96ab554a.js",
+    "main.css": "/ArmServiceReactApp/static/css/main.ed02cf33.css",
+    "main.js": "/ArmServiceReactApp/static/js/main.055f4f53.js",
     "static/media/img_opening_company.png": "/ArmServiceReactApp/static/media/img_opening_company.58e8ddf1805258811519.png",
     "static/media/VISA.png": "/ArmServiceReactApp/static/media/VISA.183b74d6d02d00881a96.png",
     "static/media/Yer.png": "/ArmServiceReactApp/static/media/Yer.4a4afd55a62b9bd5b455.png",
@@ -42,11 +42,11 @@
     "static/media/whatsapp.png": "/ArmServiceReactApp/static/media/whatsapp.1dd8ca2765f1f177ab22.png",
     "static/media/telephone.png": "/ArmServiceReactApp/static/media/telephone.fb244201058d6b0c101c.png",
     "index.html": "/ArmServiceReactApp/index.html",
-    "main.be6649a2.css.map": "/ArmServiceReactApp/static/css/main.be6649a2.css.map",
-    "main.96ab554a.js.map": "/ArmServiceReactApp/static/js/main.96ab554a.js.map"
+    "main.ed02cf33.css.map": "/ArmServiceReactApp/static/css/main.ed02cf33.css.map",
+    "main.055f4f53.js.map": "/ArmServiceReactApp/static/js/main.055f4f53.js.map"
   },
   "entrypoints": [
-    "static/css/main.be6649a2.css",
-    "static/js/main.96ab554a.js"
+    "static/css/main.ed02cf33.css",
+    "static/js/main.055f4f53.js"
   ]
 }
